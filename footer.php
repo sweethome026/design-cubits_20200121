@@ -4,7 +4,7 @@
       <!-- pagetop -->
       <div id="pagetop">
         <a href="index.html">
-          <img src="imgs/pagetop_img.svg" alt="ページトップボタン">
+          <img src="<?php echo get_template_directory_uri(); ?>/imgs/pagetop_img.svg" alt="ページトップボタン">
         </a>
       </div>
       <!-- //pagetop -->
