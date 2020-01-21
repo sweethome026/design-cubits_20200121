@@ -9,7 +9,7 @@
         <!-- <div class="mainvsl__imgbox"></div> -->
         <div class="mainvsl__slogan">
             <p class="mainvsl__slogan__sentence">小さなことから<br>お手伝い。</p>
-            <img class="mainvsl__slogan__deco" src="imgs/top/top_mainvsl_img02.png" alt="">
+            <img class="mainvsl__slogan__deco" src="<?php echo get_template_directory_uri(); ?>/imgs/top/top_mainvsl_img02.png" alt="">
             <img src="<?php echo get_template_directory_uri(); ?>/imgs/top/top_mainvsl_img02.png">
         </div>
       </div>

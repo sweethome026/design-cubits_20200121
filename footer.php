@@ -32,8 +32,7 @@
     </footer>
     <!-- //footer -->
 
-    <!-- jQueryここに読み込む -->
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- jQuery読み込み -->
+    <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
   </body>
 <!-- InstanceEnd --></html>
