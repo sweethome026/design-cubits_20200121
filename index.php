@@ -99,36 +99,37 @@
           ?>
             <li>お探しの記事はありませんでした</li>
           <?php endif; ?>
-            <!-- <article class="blog__article">
-              <a class="blog__linkbox" href="#">
-                <div class="blog__info">
-                  <span class="blog__info__tag tag--css">CSS</span>
-                  <time class="blog__info__date">2000.00.00</p>
-                </div>
-                <h2 class="blog__title">タイトル入ります</h2>
-                <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキスト</a></p>
-              </a>
-            </article>
-            <article class="blog__article">
-              <a class="blog__linkbox" href="#">
-                <div class="blog__info">
-                  <span class="blog__info__tag tag--css">CSS</span>
-                  <time class="blog__info__date">2000.00.00</p>
-                </div>
-                <h2 class="blog__title">タイトル入ります</h2>
-                <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a></p>
-              </a>
-            </article>
-            <article class="blog__article">
-              <a class="blog__linkbox" href="#">
-                <div class="blog__info">
-                  <span class="blog__info__tag tag--css">CSS</span>
-                  <time class="blog__info__date">2000.00.00</p>
-                </div>
-                <h2 class="blog__title">タイトル入ります</h2>
-                <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキスト</a></p>
-              </a>
-            </article> -->
+          
+          <article class="blog__article">
+            <a class="blog__linkbox" href="#">
+              <div class="blog__info">
+                <span class="blog__info__tag tag--css">CSS</span>
+                <time class="blog__info__date">2000.00.00</p>
+              </div>
+              <h2 class="blog__title">タイトル入ります</h2>
+              <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキスト</a></p>
+            </a>
+          </article>
+          <article class="blog__article">
+            <a class="blog__linkbox" href="#">
+              <div class="blog__info">
+                <span class="blog__info__tag tag--css">CSS</span>
+                <time class="blog__info__date">2000.00.00</p>
+              </div>
+              <h2 class="blog__title">タイトル入ります</h2>
+              <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a></p>
+            </a>
+          </article>
+          <article class="blog__article">
+            <a class="blog__linkbox" href="#">
+              <div class="blog__info">
+                <span class="blog__info__tag tag--css">CSS</span>
+                <time class="blog__info__date">2000.00.00</p>
+              </div>
+              <h2 class="blog__title">タイトル入ります</h2>
+              <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキスト</a></p>
+            </a>
+          </article>
           </div><!-- //blog__container -->
           <div class="btn">
             <a href="#">ブログを見る</a>

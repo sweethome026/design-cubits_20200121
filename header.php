@@ -9,6 +9,7 @@
       content="design cubits（デザインキュービッツ）は大阪でホームページ・イラストの制作を行うフリーランスの個人事務所です。デザインから構築、公開、運用まで一貫して行います。"
 	/>
 	<?php wp_head(); ?>
+  
   	<!-- ファビコン設定 -->
 	<link rel="icon" href="/imgs/favicon.ico">
 	<link rel="apple-touch-icon" href="/imgs/apple-touch-icon-180x180.png" sizes="180×180">
