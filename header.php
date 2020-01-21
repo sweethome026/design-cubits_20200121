@@ -15,41 +15,43 @@
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/imgs/apple-touch-icon-180x180.png" sizes="180×180">
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/imgs/icon-192x192.png" sizes="192×192" type="image/png">
   <!-- InstanceBeginEditable name="doctitle" -->
-  <title>design cubts｜ホームページ制作、ロゴ、イラスト</title>
+
+  <!-- <title>design cubts｜ホームページ制作、ロゴ、イラスト</title> -->
+
   <!-- InstanceEndEditable -->
   <!-- InstanceBeginEditable name="head" -->
   <!-- InstanceEndEditable -->
   </head>
 
-  <body id="top"><!-- InstanceParam name="id" type="text" value="top" -->
+  <body <?php my_body_id(); ?>><!-- InstanceParam name="id" type="text" value="top" -->
     <!-- header -->
-    <header id="header" class="header">
-      <div class="header__container">
-        <div class="header-logo">
-          <a href="index.html">
-            <picture>
-              <source media="(max-width: 1024px)" srcset="imgs/logo_white.svg" alt="design cubits（デザインキュービッツ）">
-              <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo_pc.svg" alt="design cubits（デザインキュービッツ）" class="js-logo">
-            </picture>
-          </a>
-        </div>
-
-        <nav id="gnav" class="gnav">
-          <ul class="gnav__list">
-            <li class="gnav__list__item"><a href="services.html">サービス紹介</a></li>
-            <li class="gnav__list__item">
-              <a href="about.html">design cubitsについて</a>
-            </li>
-            <li class="gnav__list__item"><a href="blog.html">ブログ</a></li>
-            <li class="gnav__list__item"><a href="contact.html">お問い合わせ</a></li>
-          </ul>
-        </nav>
-
-        <div id="menuBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
+  <header id="header" class="header">
+    <div class="header__container">
+      <div class="header-logo">
+        <a href="index.html">
+          <picture>
+            <source media="(max-width: 1024px)" srcset="imgs/logo_white.svg" alt="design cubits（デザインキュービッツ）">
+            <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo_pc.svg" alt="design cubits（デザインキュービッツ）" class="js-logo">
+          </picture>
+        </a>
       </div>
+
+      <nav id="gnav" class="gnav">
+        <ul class="gnav__list">
+          <li class="gnav__list__item"><a href="services.html">サービス紹介</a></li>
+          <li class="gnav__list__item">
+            <a href="about.html">design cubitsについて</a>
+          </li>
+          <li class="gnav__list__item"><a href="blog.html">ブログ</a></li>
+          <li class="gnav__list__item"><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <div id="menuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+    </div>
 	</header>
