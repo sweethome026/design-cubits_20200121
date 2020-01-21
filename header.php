@@ -9,11 +9,11 @@
       content="design cubits（デザインキュービッツ）は大阪でホームページ・イラストの制作を行うフリーランスの個人事務所です。デザインから構築、公開、運用まで一貫して行います。"
 	/>
 	<?php wp_head(); ?>
-  
+
   	<!-- ファビコン設定 -->
-	<link rel="icon" href="/imgs/favicon.ico">
-	<link rel="apple-touch-icon" href="/imgs/apple-touch-icon-180x180.png" sizes="180×180">
-	<link rel="icon" href="/imgs/icon-192x192.png" sizes="192×192" type="image/png">
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/imgs/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/imgs/apple-touch-icon-180x180.png" sizes="180×180">
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/imgs/icon-192x192.png" sizes="192×192" type="image/png">
   <!-- InstanceBeginEditable name="doctitle" -->
   <title>design cubts｜ホームページ制作、ロゴ、イラスト</title>
   <!-- InstanceEndEditable -->
@@ -29,7 +29,7 @@
           <a href="index.html">
             <picture>
               <source media="(max-width: 1024px)" srcset="imgs/logo_white.svg" alt="design cubits（デザインキュービッツ）">
-              <img src="imgs/logo_pc.svg" alt="design cubits（デザインキュービッツ）" class="js-logo">
+              <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo_pc.svg" alt="design cubits（デザインキュービッツ）" class="js-logo">
             </picture>
           </a>
         </div>
