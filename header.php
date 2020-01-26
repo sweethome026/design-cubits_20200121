@@ -16,7 +16,7 @@
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/imgs/icon-192x192.png" sizes="192×192" type="image/png">
   <!-- InstanceBeginEditable name="doctitle" -->
 
-  <!-- <title>design cubts｜ホームページ制作、ロゴ、イラスト</title> -->
+  <title><?php bloginfo('name'); ?></title>
 
   <!-- InstanceEndEditable -->
   <!-- InstanceBeginEditable name="head" -->
