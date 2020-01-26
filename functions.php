@@ -50,26 +50,7 @@ add_theme_support('title-tag'); // タイトルを付ける
 add_filter('document_title_separator', function () { return '|'; }); // タイトルの区切り文字を「|」にする (必要な場合)
 ?>
 
-<!-- <?php
-function my_body_id()
-{
-    $post_obj = $GLOBALS['wp_the_query']->get_queried_object();
-    $slug = '';
-    if (is_front_page()) {
-        $slug = 'top';
-        if (is_page() && get_post(get_the_ID())->post_name) {
-            $slug = $post_obj->post_name;
-        }
-    } elseif (is_home()) {
-        $slug = 'blog';
-        if (is_page() && get_post(get_the_ID())->post_name) {
-            $slug = $post_obj->post_name;
-        }
-    }
-    $body_id = esc_attr($slug);
-    echo ($body_id) ? 'id="'.$body_id.'"' : '';
-}
-?> -->
+
 
 <?php
   if (is_front_page()) {
