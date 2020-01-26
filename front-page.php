@@ -82,58 +82,30 @@
           <h2 data-h2subttl="blog">ブログ</h2>
           
           <div class="blog__container">
-          <?php
-          $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 3,
-          );
-          $the_query = new WP_Query($args);
-          if ($the_query->have_posts()) :
-          while ($the_query->have_posts()) : $the_query->the_post();
-          ?>
-            <li><a href="<?php the_permalink(); ?>"><?php the_time('Y/n/j'); ?>　<?php the_title(); ?></a></li>
-          <?php
-              endwhile;
-            else:
-          ?>
-            <li>お探しの記事はありませんでした</li>
-          <?php endif; ?>
+            <?php
+            $args = array(
+              'post_type' => 'post',
+              'posts_per_page' => 3,
+            );
+            $the_query = new WP_Query($args);
+            if ($the_query->have_posts()) :
+            while ($the_query->have_posts()) : $the_query->the_post();
+            ?>
+              <li><a href="<?php the_permalink(); ?>"><?php the_time('Y/n/j'); ?><?php the_title(); ?></a></li>
+            <?php
+                endwhile;
+              else:
+            ?>
+              <li>お探しの記事はありませんでした</li>
+            <?php endif; ?>
+        </secttion>
 
-          <article class="blog__article">
-            <a class="blog__linkbox" href="#">
-              <div class="blog__info">
-                <span class="blog__info__tag tag--css">CSS</span>
-                <time class="blog__info__date">2000.00.00</p>
-              </div>
-              <h2 class="blog__title">タイトル入ります</h2>
-              <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキスト</a></p>
-            </a>
-          </article>
-          <article class="blog__article">
-            <a class="blog__linkbox" href="#">
-              <div class="blog__info">
-                <span class="blog__info__tag tag--css">CSS</span>
-                <time class="blog__info__date">2000.00.00</p>
-              </div>
-              <h2 class="blog__title">タイトル入ります</h2>
-              <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a></p>
-            </a>
-          </article>
-          <article class="blog__article">
-            <a class="blog__linkbox" href="#">
-              <div class="blog__info">
-                <span class="blog__info__tag tag--css">CSS</span>
-                <time class="blog__info__date">2000.00.00</p>
-              </div>
-              <h2 class="blog__title">タイトル入ります</h2>
-              <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキスト</a></p>
-            </a>
-          </article>
+
+
           </div><!-- //blog__container -->
           <div class="btn">
             <a href="#">ブログを見る</a>
           </div>
-        </section><!-- //blog -->
 
         <section class="contact">
           <h2 class="contact__title" data-h2subttl="contact">お問い合わせ</h2>
@@ -141,7 +113,8 @@
           <div class="btn btn--white">
             <a href="contact.html">お問い合わせフォームへ</a>
           </div>
-        </section><!-- //scontact -->
+        </section><!-- //contact -->
+      </div>
       <!-- //contents -->
 
     <!-- InstanceEndEditable -->
