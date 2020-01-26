@@ -50,7 +50,7 @@ add_theme_support('title-tag'); // タイトルを付ける
 add_filter('document_title_separator', function () { return '|'; }); // タイトルの区切り文字を「|」にする (必要な場合)
 ?>
 
-<?php
+<!-- <?php
 function my_body_id()
 {
     $post_obj = $GLOBALS['wp_the_query']->get_queried_object();
@@ -69,4 +69,15 @@ function my_body_id()
     $body_id = esc_attr($slug);
     echo ($body_id) ? 'id="'.$body_id.'"' : '';
 }
+?> -->
+
+<?php
+  if (is_front_page()) {
+      $body_id = 'top';
+  } elseif (is_home() || is_page()) {
+      $body_id = 'blog'.$post->post_name.'';
+  } elseif (is_category()) {
+      $category = get_the_category();
+      $body_id = 'category_'.$category[0]->category_nicename.'';
+  }
 ?>

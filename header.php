@@ -16,19 +16,25 @@
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/imgs/icon-192x192.png" sizes="192×192" type="image/png">
   <!-- InstanceBeginEditable name="doctitle" -->
 
-  <title><?php bloginfo('name'); ?></title>
+  <title>
+    <?php if (!is_home()) {
+    wp_title('|', true, 'right');
+}
+    bloginfo('name');
+    ?>
+  </title>
 
   <!-- InstanceEndEditable -->
   <!-- InstanceBeginEditable name="head" -->
   <!-- InstanceEndEditable -->
   </head>
 
-  <body <?php my_body_id(); ?>><!-- InstanceParam name="id" type="text" value="top" -->
+  <body<?php echo ($body_id) ? ' id="'.$body_id.'"' : ''; ?><!-- InstanceParam name="id" type="text" value="top" -->
     <!-- header -->
   <header id="header" class="header">
     <div class="header__container">
       <div class="header-logo">
-        <a href="index.html">
+        <a href="<?php echo home_url(); ?>">
           <picture>
             <source media="(max-width: 1024px)" srcset="imgs/logo_white.svg" alt="design cubits（デザインキュービッツ）">
             <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo_pc.svg" alt="design cubits（デザインキュービッツ）" class="js-logo">
