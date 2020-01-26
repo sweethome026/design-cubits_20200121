@@ -78,9 +78,9 @@
             <a href="#" class="article__linkbox">
               <div class="article__info">
                 <span class="article__info__tag tag--illustrator">Illustrator</span>
-                <time class="article__info__date">2000.00.00</p>
+                <time class="article__info__date">2000.00.00</time>
               </div>
-              <div href="#" class="article__contents">
+              <div class="article__contents">
                 <h2 class="article__title">タイトル入ります テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</h2>
                 <p class="article__exerpt">本文が入ります　テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
               </div>

@@ -29,7 +29,7 @@
   <!-- InstanceEndEditable -->
   </head>
 
-  <body<?php echo ($body_id) ? ' id="'.$body_id.'"' : ''; ?><!-- InstanceParam name="id" type="text" value="top" -->
+  <body <?php my_body_id(); ?>><!-- InstanceParam name="id" type="text" value="top" -->
     <!-- header -->
   <header id="header" class="header">
     <div class="header__container">
