@@ -50,6 +50,10 @@ add_theme_support('title-tag'); // タイトルを付ける
 add_filter('document_title_separator', function () { return '|'; }); // タイトルの区切り文字を「|」にする (必要な場合)
 ?>
 
+<!--
+    is_homeとis_front_pageは、設定→表示設定→フロントページの表示 において、固定ページを選択したときに違いが出る。
+    参考：https://accelboon.com/tn/wordpress-is_front_page-%E3%81%A8-is_home-%E3%81%AE%E9%81%95%E3%81%84/
+ -->
 <?php
 function my_body_id()
 {
