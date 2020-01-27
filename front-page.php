@@ -80,7 +80,6 @@
 
         <section class="blog wrap">
           <h2 data-h2subttl="blog">ブログ</h2>
-          
           <div class="blog__container">
             <?php
             $args = array(
@@ -98,14 +97,11 @@
             ?>
               <li>お探しの記事はありませんでした</li>
             <?php endif; ?>
-        </secttion>
-
-
-
           </div><!-- //blog__container -->
           <div class="btn">
             <a href="#">ブログを見る</a>
           </div>
+        </secttion>
 
         <section class="contact">
           <h2 class="contact__title" data-h2subttl="contact">お問い合わせ</h2>
