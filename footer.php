@@ -11,21 +11,20 @@
 
       <div class="footer__content wrap">
         <ul class="footer__menu">
-          <li class="footer__menu__item" class="txt-link">
-            <a href="services.html">サービス紹介</a>
+          <li class="footer__menu__item txt-link">
+            <a href="../services.html">サービス紹介</a>
           </li>
           <li class="footer__menu__item txt-link">
-            <a href="about.html">design cubitsについて</a>
+            <a href="../about.html">design cubitsについて</a>
           </li>
-          <li class="footer__menu__item txt-link"><a href="blog.html">ブログ</a></li>
+          <li class="footer__menu__item txt-link"><a href="../blog.html">ブログ</a></li>
           <li class="footer__menu__item txt-link">
-            <a href="contact.html">お問い合わせ</a>
+            <a href="../contact.html">お問い合わせ</a>
           </li>
         </ul>
 
         <ul class="footer__under">
           <li class="privacy-policy"><a href="#"><small>プライバシーポリシー</small></a></li>
-          </span>
           <li class="copyright"><small>&copy; 2019 design cubits</small></li>
        </ul>
       </div>
