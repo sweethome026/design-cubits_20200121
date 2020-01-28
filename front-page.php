@@ -79,7 +79,7 @@
         </section><!-- //services -->
 
         <section class="blog wrap">
-          <h2 data-h2subttl="blog">ブログ</h2>
+          <h2 data-h2subttl="blog">ブログbbbbbb</h2>
           <div class="blog__container">
             <?php
             $args = array(
@@ -101,7 +101,7 @@
           <div class="btn">
             <a href="#">ブログを見る</a>
           </div>
-        </secttion>
+        </section>
 
         <section class="contact">
           <h2 class="contact__title" data-h2subttl="contact">お問い合わせ</h2>
