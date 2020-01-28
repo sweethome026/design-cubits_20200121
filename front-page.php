@@ -26,7 +26,7 @@
           <ul class="services__list noicon">
             <li class="services__list__item ">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon01.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon01.png" alt=""><!-- get_template_directory_uri();はテーマディレクトリの URI（URL）を取得するテンプレートタグ -->
               </figure>
               <h4 class="services__name">Webサイトデザイン</h4>
             </li>
@@ -79,29 +79,58 @@
         </section><!-- //services -->
 
         <section class="blog wrap">
-          <h2 data-h2subttl="blog">ブログbbbbbb</h2>
+          <h2 data-h2subttl="blog">ブログ</h2>
           <div class="blog__container">
+
+            <!-- 1番目のやり方。 -->
             <?php
-            $args = array(
-              'post_type' => 'post',
-              'posts_per_page' => 3,
-            );
-            $the_query = new WP_Query($args);
-            if ($the_query->have_posts()) :
-            while ($the_query->have_posts()) : $the_query->the_post();
+            if (have_posts()):
+              while (have_posts()):the_post();
             ?>
-              <li><a href="<?php the_permalink(); ?>"><?php the_time('Y/n/j'); ?><?php the_title(); ?></a></li>
+            <article id="post-<?php the_ID(); ?>" <?php post_class('blog__article'); ?>>
+              <a class="blog__linkbox" href="<?php the_permalink(); ?>">
+                <div class="blog__info">
+                  <?php the_category(); ?>
+                  <!-- <span class="blog__info__tag tag--css">CSS</span> -->
+                  <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                </div>
+                <h2 class="blog__title"><?php the_title(); ?></h2>
+                <p class="blog__exerpt"><?php the_excerpt(); ?></p>
+              </a>
+            </article>
             <?php
-                endwhile;
-              else:
+              endwhile;
+            endif;
             ?>
-              <li>お探しの記事はありませんでした</li>
-            <?php endif; ?>
+
+          <!-- ↓2番めのやり方 -->
+          <?php
+            $args = array('posts_per_page' => 3);
+            $postslist = get_posts($args);
+            foreach ($postslist as $post) :  /* ループ開始 */
+              setup_postdata($post); ?> <!-- 記事データの取得 -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class('blog__article'); ?>>
+                  <a class="blog__linkbox" href="<?php the_permalink(); ?>">
+                    <div class="blog__info">
+                      <span class="blog__info__tag tag--css">
+                        <?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->cat_name; ?><!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
+                      </span>
+                      <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                    </div>
+                    <h2 class="blog__title"><?php the_title(); ?></h2>
+                    <p class="blog__exerpt"><?php echo get_the_excerpt(); ?></p>
+                  </a>
+                </article>
+          <?php
+          endforeach;
+          wp_reset_postdata(); /* 直前のクエリ復元（どういう意味？） */
+          ?>
+          
           </div><!-- //blog__container -->
           <div class="btn">
             <a href="#">ブログを見る</a>
           </div>
-        </section>
+        </section><!-- //blog -->
 
         <section class="contact">
           <h2 class="contact__title" data-h2subttl="contact">お問い合わせ</h2>

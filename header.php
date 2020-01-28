@@ -42,13 +42,14 @@
         </a>
       </div>
 
+      <!-- WPCOdexを参考にリンクを貼る　参考：投稿、固定ページ、カテゴリーへのリンク -->
       <nav id="gnav" class="gnav">
         <ul class="gnav__list">
-          <li class="gnav__list__item"><a href="services.html">サービス紹介</a></li>
+          <li class="gnav__list__item"><a href="/index.php?page_id=67">サービス紹介</a></li>
           <li class="gnav__list__item">
-            <a href="about.html">design cubitsについて</a>
+            <a href="/index.php?page_id=41">design cubitsについて</a>
           </li>
-          <li class="gnav__list__item"><a href="blog.html">ブログ</a></li>
+          <li class="gnav__list__item"><a href="/index.php?page_id=30">ブログ</a></li>
           <li class="gnav__list__item"><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>

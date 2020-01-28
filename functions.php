@@ -75,6 +75,11 @@ function my_body_id()
         if (is_page() && get_post(get_the_ID())->post_name) {
             $slug = $post_obj->post_name;
         }
+    } elseif (is_single()) {
+        $slug = 'blog';
+        if (is_page() && get_post(get_the_ID())->post_name) {
+            $slug = $post_obj->post_name;
+        }
     }
 
     $body_id = esc_attr($slug);
