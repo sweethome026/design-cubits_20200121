@@ -26,49 +26,49 @@
           <ul class="services__list noicon">
             <li class="services__list__item ">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon01.png" alt="">
+                <img src="imgs/services_icon01.png" alt="">
               </figure>
               <h4 class="services__name">Webサイトデザイン</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon02.png" alt="">
+                <img src="imgs/services_icon02.png" alt="">
               </figure>
               <h4 class="services__name">LP / バナー</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon03.png" alt="">
+                <img src="imgs/services_icon03.png" alt="">
               </figure>
               <h4 class="services__name">コーディング</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon04.png" alt="">
+                <img src="imgs/services_icon04.png" alt="">
               </figure>
               <h4 class="services__name">イラスト / ロゴ</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon05.png" alt="">
+                <img src="imgs/services_icon05.png" alt="">
               </figure>
               <h4 class="services__name">サイト運営サポート</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon06.png" alt="">
+                <img src="imgs/services_icon06.png" alt="">
               </figure>
               <h4 class="services__name">DTP</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon07.png" alt="">
+                <img src="imgs/services_icon07.png" alt="">
               </figure>
               <h4 class="services__name">広報支援</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon08.png" alt="">
+                <img src="imgs/services_icon08.png" alt="">
               </figure>
               <h4 class="services__name">UI / UX デザイン</h4>
             </li>
@@ -79,29 +79,32 @@
         </section><!-- //services -->
 
         <section class="blog wrap">
-          <h2 data-h2subttl="blog">ブログbbbbbb</h2>
+          <h2 data-h2subttl="blog">ブログ</h2>
           <div class="blog__container">
             <?php
-            $args = array(
-              'post_type' => 'post',
-              'posts_per_page' => 3,
-            );
-            $the_query = new WP_Query($args);
-            if ($the_query->have_posts()) :
-            while ($the_query->have_posts()) : $the_query->the_post();
+            if (have_posts()):
+              while (have_posts()):the_post();
             ?>
-              <li><a href="<?php the_permalink(); ?>"><?php the_time('Y/n/j'); ?><?php the_title(); ?></a></li>
+            <article id="post-<?php the_ID(); ?>" <php post_class('blog__article'); ?>>
+              <a class="blog__linkbox" href="#">
+                <div class="blog__info">
+                  <?php the_category(); ?>
+                  <!-- <span class="blog__info__tag tag--css">CSS</span> -->
+                  <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                </div>
+                <h2 class="blog__title">タイトル入ります</h2>
+                <p class="blog__exerpt"><a href="#">本文が入ります　テキストテキストテキストテキストテキストテキスト</a></p>
+              </a>
+            </article>
             <?php
-                endwhile;
-              else:
+              endwhile;
+            endif;
             ?>
-              <li>お探しの記事はありませんでした</li>
-            <?php endif; ?>
           </div><!-- //blog__container -->
           <div class="btn">
             <a href="#">ブログを見る</a>
           </div>
-        </section>
+        </section><!-- //blog -->
 
         <section class="contact">
           <h2 class="contact__title" data-h2subttl="contact">お問い合わせ</h2>
