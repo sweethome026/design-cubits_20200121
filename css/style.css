@@ -1385,6 +1385,30 @@ Page style
   color: #fff;
 }
 
+#top .blog__info .tag--illustrator {
+  background-color: #f0b899;
+}
+
+#top .blog__info .tag--wp {
+  background-color: #99d1f0;
+}
+
+#top .blog__info .tag--coding {
+  background-color: #c9e693;
+}
+
+#top .blog__info .tag--others {
+  background-color: #f099a6;
+}
+
+#top .blog__info .tag--freelance {
+  background-color: #99a6f0;
+}
+
+#top .blog__info .tag--days {
+  background-color: #f0e399;
+}
+
 #top .blog__info .tag--css {
   background-color: #9ad1ef;
 }

@@ -32,43 +32,42 @@
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon02.png" alt="">
               </figure>
               <h4 class="services__name">LP / バナー</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon03.png" alt="">
+                <img src="imgs/services_icon03.png" alt="">
               </figure>
               <h4 class="services__name">コーディング</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon04.png" alt="">
+                <img src="imgs/services_icon04.png" alt="">
               </figure>
               <h4 class="services__name">イラスト / ロゴ</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon05.png" alt="">
+                <img src="imgs/services_icon05.png" alt="">
               </figure>
               <h4 class="services__name">サイト運営サポート</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon06.png" alt="">
+                <img src="imgs/services_icon06.png" alt="">
               </figure>
               <h4 class="services__name">DTP</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon07.png" alt="">
+                <img src="imgs/services_icon07.png" alt="">
               </figure>
               <h4 class="services__name">広報支援</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon08.png" alt="">
+                <img src="imgs/services_icon08.png" alt="">
               </figure>
               <h4 class="services__name">UI / UX デザイン</h4>
             </li>
@@ -112,8 +111,8 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class('blog__article'); ?>>
                   <a class="blog__linkbox" href="<?php the_permalink(); ?>">
                     <div class="blog__info">
-                      <span class="blog__info__tag tag--css">
-                        <?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->cat_name; ?><!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
+                      <span class="blog__info__tag tag--<?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->slug; ?>">
+                        <?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->cat_name; ?><!-- テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。 -->
                       </span>
                       <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                     </div>

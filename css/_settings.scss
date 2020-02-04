@@ -123,3 +123,35 @@ $color-bg02: #ebebeb;
   line-height: 175%;
   color: $color-trueWhite;
 }
+
+
+//blog-tag-color
+@mixin tag-color {
+  .tag--illustrator {
+    background-color: $color-tag-illustrator;
+  }
+  
+  .tag--wp {
+    background-color: $color-tag-wp;
+  }
+  
+  .tag--coding {
+    background-color: $color-tag-coding;
+  }
+  
+  .tag--others {
+    background-color: $color-tag-others;
+  }
+  
+  .tag--freelance {
+    background-color: $color-tag-freelance;
+  }
+  
+  .tag--days {
+    background-color: $color-tag-days;
+  }
+  
+  .tag--css {
+    background-color: $color-tag-css;
+  }
+}
