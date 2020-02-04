@@ -112,7 +112,7 @@
                   <a class="blog__linkbox" href="<?php the_permalink(); ?>">
                     <div class="blog__info">
                       <span class="blog__info__tag tag--<?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->slug; ?>">
-                        <?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->cat_name; ?><!-- テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。 -->
+                        <?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->cat_name; ?><!-- テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取。 -->
                       </span>
                       <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                     </div>
