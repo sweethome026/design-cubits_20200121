@@ -32,42 +32,44 @@
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon02.png" alt="">
               </figure>
               <h4 class="services__name">LP / バナー</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
                 <img src="imgs/services_icon03.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon03.png" alt="">
               </figure>
               <h4 class="services__name">コーディング</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="imgs/services_icon04.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon04.png" alt="">
               </figure>
               <h4 class="services__name">イラスト / ロゴ</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="imgs/services_icon05.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon05.png" alt="">
               </figure>
               <h4 class="services__name">サイト運営サポート</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="imgs/services_icon06.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon06.png" alt="">
               </figure>
               <h4 class="services__name">DTP</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="imgs/services_icon07.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon07.png" alt="">
               </figure>
               <h4 class="services__name">広報支援</h4>
             </li>
             <li class="services__list__item">
               <figure class="services__icon">
-                <img src="imgs/services_icon08.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/imgs/services_icon08.png" alt="">
               </figure>
               <h4 class="services__name">UI / UX デザイン</h4>
             </li>
