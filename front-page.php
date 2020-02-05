@@ -92,7 +92,6 @@
               <a class="blog__linkbox" href="<?php the_permalink(); ?>">
                 <div class="blog__info">
                   <?php the_category(); ?>
-                  <!-- <span class="blog__info__tag tag--css">CSS</span> -->
                   <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
                 <h2 class="blog__title"><?php the_title(); ?></h2>
@@ -114,7 +113,7 @@
                   <a class="blog__linkbox" href="<?php the_permalink(); ?>">
                     <div class="blog__info">
                       <span class="blog__info__tag tag--<?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->slug; ?>">
-                        <?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->cat_name; ?><!-- テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取。 -->
+                        <?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->cat_name; ?><!-- テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。 -->
                       </span>
                       <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                     </div>
@@ -126,7 +125,31 @@
           endforeach;
           wp_reset_postdata(); /* 直前のクエリ復元（どういう意味？） */
           ?>
-          
+
+          <!-- あざみさんに教わった方法 -->
+          <?php
+          $args = array(/* 変数部分は変更も可能だが$argsを使うのが一般的。1ページに記事を複数させる場所が複数ある時は、全く同じ変数を使わないこと（ページが違うなら良い） */
+              'post_type' => 'post', /* ''内に投稿の種類を入れる。postは普通の投稿、カスタム投稿だと違う値になる */
+              'posts_per_page' => 3, /*表示したい記事数を入れる。-1にすると全ての投稿が表示される */
+              'meta_query' => array(
+                      array(
+                              'key' => '', //カスタムフィールドのキー
+                              'value' => '', //カスタムフィールドの値
+                              'compare' => '!=', //'meta_value'のテスト演算子
+                  ),
+              ),
+          );
+          $wp_query = new WP_Query($args);
+          //ループ開始
+          if ($wp_query->have_posts()) :/* if文を入れないと、投稿がない場合の対応ができない */
+          while ($wp_query->have_posts()) : $wp_query->the_post();
+          //変数定義
+
+          ?>
+          ここにループさせたいもの
+
+          <?php endwhile; endif; wp_reset_postdata(); ?>
+
           </div><!-- //blog__container -->
           <div class="btn">
             <a href="#">ブログを見る</a>
